@@ -21,6 +21,7 @@ class ContactData extends Component {
 				},
 				valid: false,
 				touched: false,
+				labelError: 'Your name',
 			},
 			street: {
 				elementType: 'input',
@@ -34,6 +35,7 @@ class ContactData extends Component {
 				},
 				valid: false,
 				touched: false,
+				labelError: 'Your street',
 			},
 			zipCode: {
 				elementType: 'input',
@@ -49,6 +51,7 @@ class ContactData extends Component {
 				},
 				valid: false,
 				touched: false,
+				labelError: 'Your zipCode should be max 5 and min 5 character',
 			},
 			country: {
 				elementType: 'input',
@@ -62,6 +65,7 @@ class ContactData extends Component {
 				},
 				valid: false,
 				touched: false,
+				labelError: 'Please enter your country',
 			},
 			email: {
 				elementType: 'input',
@@ -75,6 +79,7 @@ class ContactData extends Component {
 				},
 				valid: false,
 				touched: false,
+				labelError: 'Please enter a valid value email with @',
 			},
 			deliveryMethod: {
 				elementType: 'select',
@@ -190,6 +195,7 @@ class ContactData extends Component {
 						invalid={!formElement.config.valid}
 						shouldValidate={formElement.config.validation}
 						touched={formElement.config.touched}
+						labelError={formElement.config.labelError}
 						changed={(event) => this.inputChangedHandler(event, formElement.id)}
 					/>
 				))}

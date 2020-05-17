@@ -12,7 +12,10 @@ const input = (props) => {
 	if (props.invalid && props.shouldValidate && props.touched) {
 		inputClasses.push(classes.Invalid);
 		validationError = (
-			<p className={classes.ValidationError}>Please enter a valid value!</p>
+			<p>
+				Please fill in correctly: <br />
+				<span className={classes.ValidationError}>{props.labelError}</span>
+			</p>
 		);
 	}
 
